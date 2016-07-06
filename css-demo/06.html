@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3_Loading动画</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        body{background-color: #333;}
+        .wrap{
+            position: relative;
+           width: 150px; 
+           height: 25px; 
+           margin:100px auto;
+           overflow: hidden;
+        }
+        .item{
+            float:left;
+            width: 5px;
+            height: 25px;
+            background-color: #fff;
+            margin-right: 2px;
+        }
+        .item:nth-child(7){
+            margin-right: 0;
+        }
+        #item-1{
+            animation:load1 1s 0.2s linear infinite alternate;
+        }
+        #item-2{
+            animation:load1 1s 0.4s linear infinite alternate;
+        }
+        #item-3{
+            animation:load1 1s 0.6s linear infinite alternate;
+        }
+        #item-4{
+            animation:load1 1s 0.8s linear infinite  alternate;
+        }
+        #item-5{
+            animation:load1 1s 0.6s linear infinite alternate;
+        }
+        #item-6{
+            animation:load1 1s 0.4s linear infinite alternate;
+        }
+        #item-7{
+            animation:load1 1s 0.2s linear infinite alternate;
+        }
+        @keyframes load1{
+            0%{transform:scaleY(1)}
+            100%{transform:scaleY(0.3)}
+        }
+
+        #item-8{
+            height: 5px;
+            margin-top: 20px;
+            animation:load2 1.2s linear infinite alternate; 
+            animation-delay: 0.2s
+        }
+        #item-9{
+            height: 10px;
+            margin-top: 15px;
+            animation:load2 1.2s linear infinite alternate; 
+            animation-delay: 0.4s
+        }
+        #item-10{
+            height: 15px;
+            margin-top: 10px;
+            animation:load2 1.2s linear infinite alternate; 
+            animation-delay: 0.6s
+        }
+        #item-11{
+            height: 20px;
+            margin-top: 5px;
+            animation:load2 1.2s linear infinite alternate; 
+            animation-delay: 0.8s
+        }
+        #item-12{
+            height: 25px;
+            animation:load2 1.2s linear infinite alternate; 
+            animation-delay: 1s
+        }
+        @keyframes load2{
+            0%{opacity: 0}
+            100%{opacity: 1}
+        }
+        
+        /*third*/
+        .third{
+            width: 6px;
+            height: 6px;
+            background-color: #fff;
+            /*box-shadow:12px 0px 0 0px #fff,28px 0 0 0px #fff,48px 0 0 0px #fff;*/
+            margin-top:10px;
+            animation:third2 1s 0.2s linear infinite alternate;
+        }
+        @keyframes third2{
+            0%{
+                box-shadow:12px 0px 0 0px #fff,28px 0 0 0px #fff,48px 0 0 0px #fff;
+            }
+            50%{
+                box-shadow:12px 0px 0 1px #fff,28px 0 0 2px #fff,48px 0 0 3px #fff;
+            }
+            100%{
+                box-shadow:12px 0px 0 2px #fff,28px 0 0 4px #fff,48px 0 0 6px #fff;
+            }
+        }
+        .wrap1{
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin:100px auto;
+        }
+        .wrap1 .item1{
+            width: 16px;
+            height: 16px;
+            background-color: #fff;
+            border-radius: 100%;
+            position: absolute;
+            animation:load 1.6s linear infinite;    
+            -webkit-animation:load 1.6s linear infinite;
+            -moz-animation:load 1.6s linear infinite;
+            -o-animation:load 1.6s linear infinite;  
+        }
+        #item1-1{
+            top:0;
+            left:32px;            
+            animation-delay: 0.6s;
+            -webkit-animation-delay: 0.6s;;
+            -moz-animation-delay: 0.6s;
+            -o-animation-delay: 0.6s;
+        }
+        #item1-2{
+            top:10px;
+            right:10px;            
+            animation-delay: 0.8s;
+            -webkit-animation-delay: 0.8s;
+            -moz-animation-delay: 0.8s;
+            -o-animation-delay: 0.8s;
+        }
+        #item1-3{
+            top:32px;
+            right:0;             
+            animation-delay: 1s;
+            -webkit-animation-delay: 1s;
+            -moz-animation-delay: 1s;
+            -o-animation-delay: 1s;
+        }
+        #item1-4{
+           bottom:10px;
+            right:10px;              
+            animation-delay: 1.2s;
+            -webkit-animation-delay: 1.2s;
+            -moz-animation-delay: 1.2s;
+            -o-animation-delay: 1.2s;
+        }        
+        #item1-5{
+            bottom:0;
+            left:32px;           
+            animation-delay: 1.4s;
+            -webkit-animation-delay: 1.4s;
+            -moz-animation-delay: 1.4s;
+            -o-animation-delay: 1.4s;
+        }
+        #item1-6{
+            bottom:10px;
+            left:10px;            
+            animation-delay: 1.6s;
+            -webkit-animation-delay: 1.6s;
+            -moz-animation-delay: 1.6s;
+            -o-animation-delay: 1.6s;
+        }
+        #item1-7{
+            left:0px;
+            top:32px;            
+            animation-delay: 1.8s;
+            -webkit-animation-delay: 1.8s;
+            -moz-animation-delay: 1.8s;
+            -o-animation-delay: 1.8s;
+        }
+        #item1-8{
+           top:10px;
+           left:10px;          
+           animation-delay: 2s;
+           -webkit-animation-delay: 2s;
+           -moz-animation-delay: 2s;
+           -o-animation-delay: 2s;
+        }
+        @keyframes load{
+            0%{transform:scale(1);}
+            100%{transform:scale(0.5);}
+        }
+        @-webkit-keyframes load{
+            0%{transform:scale(1);}
+            100%{transform:scale(0.5);}
+        }
+        @-moz-keyframes load{
+            0%{transform:scale(1);}
+            100%{transform:scale(0.5);}
+        }
+        @-o-keyframes load{
+            0%{transform:scale(1);}
+            100%{transform:scale(0.5);}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap" id="load-1">
+        <div class="item" id="item-1"></div>
+        <div class="item" id="item-2"></div>
+        <div class="item" id="item-3"></div>
+        <div class="item" id="item-4"></div>
+        <div class="item" id="item-5"></div>
+        <div class="item" id="item-6"></div>
+        <div class="item" id="item-7"></div>
+    </div>
+    <div class="wrap" id="load-2">
+        <div class="item item-p" id="item-8"></div>
+        <div class="item item-p" id="item-9"></div>
+        <div class="item item-p" id="item-10"></div>
+        <div class="item item-p" id="item-11"></div>
+        <div class="item item-p" id="item-12"></div>
+    </div>
+    <div class="wrap" id="load-3">
+        <div class="third"></div>
+    </div>
+    <div class="wrap1">
+        <div class="item1"  id="item1-1"></div>
+        <div class="item1"  id="item1-2"></div>
+        <div class="item1"  id="item1-3"></div>
+        <div class="item1"  id="item1-4"></div>
+        <div class="item1"  id="item1-5"></div>
+        <div class="item1"  id="item1-6"></div>
+        <div class="item1"  id="item1-7"></div>
+        <div class="item1"  id="item1-8"></div>
+    </div>   
+</body>
+</html>
