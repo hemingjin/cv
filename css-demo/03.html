@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录界面设计</title>
+	<style>
+		body{
+			background-color: #eee;
+		}
+		.wrap{
+			width: 400px;
+			height: 300px;
+			padding:20px;
+			margin-top:200px;
+			margin-left:auto;
+			margin-right:auto;
+			text-align: center;
+			position: relative;
+		}
+		.wrap p{
+			font-size:10px;
+			color:#fff;
+		}
+		.wrap:after{
+			content:"";
+			width: 100%;
+			height:150px;
+			background-color: #e74c3c;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			z-index:-10;
+		}
+		.login{
+			width: 360px;
+			height:220px;
+			background-color: #fff;
+			box-shadow:0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+			border-radius: 2px;
+		}
+		.login{
+			padding:30px 20px;
+		}
+		.login-title{
+			text-align: center;
+			color:#e74c3c;
+		}
+		.login-title h1{
+			text-transform: uppercase;
+		}
+		.input-group{
+			position: relative;
+			margin:8px 0 12px;
+		}
+		.form-group input{
+			border:none;
+			border-bottom: 1px solid #ccc;
+		}
+		.input-ui{
+			display: block;
+			width: 100%;
+			height: 38px;
+			padding:8px 0;
+			font-size:14px;
+			line-height: 1.4;
+			color:#ccc;
+		}
+		.input-group label{
+			position: absolute;
+			left:0;
+			top:0;
+			color:#ccc;
+			font-size:14px;
+			line-height: 55px;
+		}
+		.login-action{
+			float: right;
+		}
+		.login-action button{
+			font-size: 12px;
+			text-transform: uppercase;
+			color:#e74c3c;
+			background-color: #fff;
+			border:none;
+			border:1px solid #e74c3c;
+			padding:5px 10px;
+			cursor: pointer;
+		}
+		.login-action button:hover{
+			color:#fff;
+			background-color: #e74c3c;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="login">
+			<div class="login-content">
+				<section class="login-title">
+					<h1>WELCOME</h1>
+				</section>
+				<form action="" id="login" class="login-form">
+					<div class="form-group">
+						<div class="input-group">
+							<input type="text" class="input-ui">
+							<span></span>
+							<label for="">Email</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="input-group">
+							<input type="text" class="input-ui">
+							<span></span>
+							<label for="">Password</label>
+						</div>
+					</div>
+					<div class="login-action">
+						<button id="register" type="button" vlaue="register">register</button>
+						<button id="login" type="submit" vlaue="login">LOGIN</button>
+					</div>
+				</form>
+			</div>
+			
+		</div>
+		<p>&copy;XIAOHE</p>
+	</div>
+</body>
+</html>
