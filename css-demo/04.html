@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CSS六边形</title>
+    <style>
+        .wrap{
+            width: 150px;
+            height: 86px;
+            background-color: #ccc;
+            margin:200px auto;
+            position: relative;
+        }
+        .wrap:after{
+            content: "";
+            width: 150px;
+            height: 86px;
+            position: absolute;
+            -webkit-transform: rotate(60deg);
+            -moz-transform: rotate(60deg);
+            -ms-transform: rotate(60deg);
+            -o-transform: rotate(60deg);
+            transform: rotate(60deg);
+            -webkit-transform-origin: 75px 43px;
+            -moz-transform-origin: 75px 43px;
+            -ms-transform-origin: 75px 43px;
+            -o-transform-origin: 75px 43px;
+            transform-origin: 75px 43px;
+            background-color: #ccc;
+        }
+        .wrap:before{
+            content: "";
+            width: 150px;
+            height: 86px;
+            position: absolute;
+            -webkit-transform: rotate(-60deg);
+            -moz-transform: rotate(-60deg);
+            -ms-transform: rotate(-60deg);
+            -o-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+            -webkit-transform-origin: 75px 43px;
+            -moz-transform-origin: 75px 43px;
+            -ms-transform-origin: 75px 43px;
+            -o-transform-origin: 75px 43px;
+            transform-origin: 75px 43px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        
+    </div>
+    <div class="wrap">
+        
+    </div>
+</body>
+</html>
