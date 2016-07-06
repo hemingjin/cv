@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 图片3D翻转特效</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        img{display: block;}
+        .content{
+            width: 300px;
+            height: 450px;
+            margin:0 auto;
+        }
+        a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition-duration: 700ms;
+            transform-style: preserve-3d;
+        }
+        .before,.after{
+            background-position: center;
+            background-size:cover;
+            background-repeat: no-repeat;
+            backface-visibility:hidden; /*隐藏被旋转的元素的背面*/
+            position: absolute;
+            top: 0;
+            left: 0;
+            right:0;
+	        bottom:0;
+        }
+        .before{
+            background-image:url(img/girl-sm.jpg);
+            z-index:2;
+            transform:rotateY(0deg);
+            transition: z-index 0s 175ms;
+        }
+        .after{
+            background:url(img/test.jpg);
+            z-index:0;   
+            transform:rotateY(180deg);
+            transition: z-index 0s 175ms
+        }
+        a:hover{
+            transform:rotateY(-180deg);
+        }
+        .content:hover .before{
+            z-index:0;
+        }
+        .content:hover .after{
+            z-index:2;
+        }
+        
+        .after .desc{
+            position: absolute;
+            top: 40px;
+            left:50%;
+            margin-left: -100px;
+            width: 200px;
+        }
+        .after .desc p{
+            color:#fff;
+            font-size:12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height:20px;
+            padding:5px;
+            border-bottom:2px solid #fff;
+        }
+        .after .btn{
+            position: absolute;
+            padding:5px 50px;
+            color:#fff;
+            background-color: transparent;
+            border:2px solid #fff;
+            bottom:30px;
+            left:50%;
+            transform:translateX(-50%);
+            transition:all 0.3s;
+        }
+        .after .btn:hover{
+            border-color:#000;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <a href="">
+            <div class="before">
+                <img src="img/girl-sm.jpg" alt="">
+            </div>
+            <div class="after">
+                <img src="img/test.jpg" alt="">
+                <div class="desc">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, molestias, cum culpa eveniet tenetur, ex aspernatur quis laboriosam perferendis deserunt in cupiditate nisi qui ut commodi. Quod accusamus accusantium illo.
+                    </p>
+                </div>
+                <div class="btn">GO</div>
+            </div>
+        </a>
+    </div>
+    
+    
+</body>
+</html>
