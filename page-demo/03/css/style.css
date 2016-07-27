@@ -406,7 +406,7 @@ a{
     z-index: 10000;
     top:0;
     left:100%;
-    margin-left:-10px;
+    /*margin-left:-10px;*/
     width: 1000px;
     min-height: 465px;
     border:1px solid #C81623;
