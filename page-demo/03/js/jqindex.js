@@ -104,4 +104,15 @@ $(document).ready(function(){
 		$(".rec-r .rec-img").stop(true,true)
 		.animate({"left":-rIndex*$newLeft},300);
 	});
+	/*搜索框*/
+	var $search_txt=$("input.search-text");
+	$search_txt.bind({focus:function(){
+		if(this.value==this.defaultValue){
+			this.value="";
+		}
+	},blur:function(){
+		if(this.value==""){
+			this.value=this.defaultValue;
+		}
+	}});
 });
