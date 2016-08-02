@@ -227,9 +227,11 @@ a{
 }
 .search-text{
     height: 30px;
-    width: 350px;
+    width: 330px;
     border:2px solid #B61D1D;
     float: left;
+    padding:0 10px;
+    color:#9A9696;
 }
 .search-btn{
     border: none;
