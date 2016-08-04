@@ -232,7 +232,7 @@ body{
     }
     .share-b{
         position: relative;
-        display: inline-block;
+        display: none;
     }
     .copyright{
         position: absolute;
