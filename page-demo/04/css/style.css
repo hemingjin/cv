@@ -80,7 +80,7 @@ a:hover{
 }
 .search{
     float: left;
-        margin-left: 80px;
+        margin-left: 40px;
     margin-top: 10px;
 }
 .search-main{
@@ -119,11 +119,11 @@ a:hover{
     margin-left: 20px;
 }
 .user-manager{
-    background: url(../image/icon.png) no-repeat 0px -72px;
+    background: url(../image/icon.png) no-repeat 0px -82px;
     padding-left:25px;
     display: inline-block;
-    height:30px;
-    padding-top: 10px;
+    /*height:30px;
+    padding-top: 10px;*/
 }
 .order-search{
     background: url(../image/icon.png) no-repeat 0px -52px;
@@ -136,17 +136,19 @@ a:hover{
     background-color: #dd3377;
 }
 nav{
+    
+}
+.main-menu{
     width: 1200px;
     height: 40px;
     margin:0 auto;
     background-color: #d37;
-}
-.main-menu{
-    display:inline-block;
+    /*display:inline-block;*/
 }
 .main-menu li{
     float:left;
     line-height:40px;
+    list-style: none;
 }
 .main-menu li a{
     text-decoration: none;
@@ -327,8 +329,12 @@ a.menu-after:after{
 .feature-item{
     float: left;
     margin-right: 28px;
+    width:279px;
 }
 .feature-item:last-child{
+    margin-right: 0;
+}
+.feature-item-last{
     margin-right: 0;
 }
 .feature-item p{
